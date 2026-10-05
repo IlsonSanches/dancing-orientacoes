@@ -1,0 +1,1092 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Por que fazemos assim? | Dancing Patinação</title>
+<meta name="description" content="Os 11 cuidados da rotina da Dancing Patinação e o motivo de cada um.">
+<!-- Página pública, mas fora dos buscadores. Remova a linha abaixo se quiser que apareça no Google. -->
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+  /* Troque estas cores pelas da marca da Dancing, se quiser. */
+  :root {
+    --fundo: #FBF7F2;
+    --cartao: #FFFFFF;
+    --texto: #1F2430;
+    --texto-suave: #5B6472;
+    --primaria: #0F5C63;
+    --primaria-suave: #E3F1F2;
+    --destaque: #E4572E;
+    --linha: #E7E0D6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fundo: #12171A;
+      --cartao: #1B2226;
+      --texto: #E9EDEE;
+      --texto-suave: #A3AFB3;
+      --primaria: #6FC3CB;
+      --primaria-suave: #1F3336;
+      --destaque: #FF8A66;
+      --linha: #2B353A;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  .pagina { max-width: 720px; margin: 0 auto; padding: 0 16px 56px; }
+
+  header { padding: 40px 0 24px; }
+  .marca {
+    font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--primaria); margin: 0 0 14px;
+  }
+  h1 {
+    font-family: "Fraunces", Georgia, serif; font-weight: 700;
+    font-size: clamp(34px, 9vw, 52px); line-height: 1.05; margin: 0 0 14px;
+    text-wrap: balance;
+  }
+  h1 span { color: var(--destaque); }
+  .lead { font-size: 18px; color: var(--texto-suave); margin: 0; max-width: 34em; }
+
+  .acoes { display: flex; gap: 8px; margin: 24px 0 12px; }
+  .acoes button {
+    font: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
+    color: var(--primaria); background: transparent;
+    border: 1px solid var(--linha); border-radius: 999px; padding: 6px 14px;
+  }
+  .acoes button:hover { background: var(--primaria-suave); }
+
+  details {
+    background: var(--cartao); border: 1px solid var(--linha); border-radius: 14px;
+    margin: 0 0 10px; scroll-margin-top: 12px; overflow: hidden;
+  }
+  details[open] { border-color: var(--primaria); }
+  summary {
+    list-style: none; cursor: pointer; display: grid;
+    grid-template-columns: 40px 1fr 20px; gap: 12px; align-items: center;
+    padding: 14px 16px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary:focus-visible { outline: 3px solid var(--primaria); outline-offset: -3px; border-radius: 14px; }
+  .icone {
+    width: 40px; height: 40px; border-radius: 10px; background: var(--primaria-suave);
+    display: grid; place-items: center; font-size: 20px;
+  }
+  .titulo { font-weight: 700; line-height: 1.3; display: block; }
+  .titulo small { display: block; font-weight: 400; font-size: 14.5px; color: var(--texto-suave); margin-top: 2px; }
+  .seta { width: 10px; height: 10px; border-right: 2px solid var(--texto-suave); border-bottom: 2px solid var(--texto-suave); transform: rotate(45deg); transition: transform .2s; justify-self: center; }
+  details[open] .seta { transform: rotate(-135deg); }
+
+  .corpo { padding: 4px 16px 20px; border-top: 1px solid var(--linha); }
+  .corpo h2 {
+    font-family: "Fraunces", Georgia, serif; font-size: 24px; line-height: 1.2;
+    margin: 20px 0 12px; text-wrap: balance;
+  }
+  .corpo h3 { font-size: 17px; margin: 26px 0 6px; color: var(--primaria); }
+  .corpo h3.parte {
+    font-family: "Fraunces", Georgia, serif; font-size: 21px; line-height: 1.25; color: var(--texto);
+    margin: 32px 0 8px; padding-top: 20px; border-top: 1px solid var(--linha);
+  }
+  .corpo h4 { font-size: 17px; margin: 24px 0 6px; color: var(--primaria); }
+  .corpo ol { margin: 0 0 12px; padding-left: 22px; }
+  .corpo p { margin: 0 0 12px; }
+  .corpo ul { margin: 0 0 12px; padding-left: 22px; }
+  .corpo li { margin-bottom: 4px; }
+  .frase {
+    border-left: 4px solid var(--destaque); background: var(--primaria-suave);
+    padding: 12px 14px; border-radius: 0 10px 10px 0; font-weight: 700; margin: 16px 0;
+  }
+  .voltar { display: inline-block; margin-top: 8px; font-size: 14px; font-weight: 600; color: var(--primaria); }
+
+  .fecho { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--linha); }
+  .fecho h2 { font-family: "Fraunces", Georgia, serif; font-size: 26px; margin: 0 0 12px; }
+  .fecho p { margin: 0 0 12px; }
+  footer { margin-top: 32px; color: var(--texto-suave); font-size: 15px; }
+  footer strong { color: var(--texto); display: block; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .seta { transition: none; } }
+</style>
+</head>
+<body>
+<div class="pagina" id="topo">
+
+<header>
+  <p class="marca">Dancing Patinação</p>
+  <h1>Por que fazemos <span>assim?</span></h1>
+  <p class="lead">11 cuidados que ajudam a proteger nossos alunos e organizar a rotina da escola. Toque em qualquer um deles para entender o motivo.</p>
+</header>
+
+<div class="acoes">
+  <button type="button" id="abrir">Abrir todos</button>
+  <button type="button" id="fechar">Fechar todos</button>
+</div>
+
+<main>
+
+<!-- 1 -->
+<details id="porta">
+  <summary><span class="icone">🔒</span><span class="titulo">1. Porta principal fechada<small>Mantemos controle sobre quem entra na escola.</small></span><span class="seta"></span></summary>
+  <div class="corpo">
+    <h2>Por que a porta principal da Dancing permanece fechada?</h2>
+    <p>A Dancing Patinação atende predominantemente crianças e adolescentes e conta, em grande parte de sua rotina, com colaboradoras do sexo feminino.</p>
+    <p>Por esse motivo, entendemos que o controle de acesso ao estabelecimento é uma medida básica de segurança.</p>
+    <p>Manter a porta principal permanentemente aberta para a rua e para o estacionamento permitiria a entrada direta de qualquer pessoa no interior da escola, sem identificação prévia e sem que a equipe pudesse verificar quem está acessando o espaço ou qual é a finalidade da entrada.</p>
+    <p>Isso poderia expor alunos e colaboradores a situações como:</p>
+    <ul>
+      <li>entrada de pessoas estranhas ao funcionamento da escola;</li>
+      <li>pessoas procurando acesso ao estabelecimento sem relação com as atividades;</li>
+      <li>furtos ou tentativas de furto;</li>
+      <li>pessoas em situação de alteração comportamental;</li>
+      <li>ingresso indevido de terceiros;</li>
+      <li>conflitos externos que eventualmente possam alcançar o interior da escola;</li>
+      <li>ou outras situações imprevisíveis de risco.</li>
+    </ul>
+    <p>Em um estabelecimento frequentado principalmente por crianças e adolescentes, consideramos inadequado esperar que um problema aconteça para somente depois adotar medidas de prevenção.</p>
+    <p>A porta fechada <strong>não significa impedir ou dificultar o acesso das famílias</strong>.</p>
+    <p>Pais, responsáveis, alunos, fornecedores e demais pessoas autorizadas continuam tendo acesso normalmente. A diferença é que essa entrada ocorre de forma controlada e com conhecimento da equipe.</p>
+
+    <h3>A lógica da medida é simples</h3>
+    <p>Uma porta aberta permite que qualquer pessoa entre primeiro e seja identificada depois.</p>
+    <p>Uma porta fechada permite que a escola identifique primeiro quem pretende entrar e, somente então, autorize o acesso.</p>
+    <p>Consideramos a segunda opção mais adequada para um ambiente frequentado por menores.</p>
+
+    <h3>Segurança preventiva</h3>
+    <p>Medidas de segurança muitas vezes parecem desnecessárias justamente porque o evento que elas pretendem evitar ainda não ocorreu.</p>
+    <p>Controle de acesso, proteção de janelas, organização da entrada e saída dos alunos e delimitação das áreas internas funcionam da mesma maneira: são medidas preventivas.</p>
+    <p>A Dancing não considera razoável expor crianças e colaboradores a um risco evitável apenas para que a entrada no estabelecimento seja alguns segundos mais rápida ou mais conveniente.</p>
+    <p>Por isso, a porta principal permanece fechada durante o funcionamento da escola.</p>
+
+    <h3>O objetivo não é restringir. É proteger.</h3>
+    <p>O controle de acesso não foi criado contra pais, responsáveis ou visitantes.</p>
+    <p>Ele existe para que a escola saiba quem está dentro de suas instalações e possa reduzir a possibilidade de ingresso de pessoas não identificadas ou não autorizadas.</p>
+    <p>Essa é uma das medidas que compõem a política de segurança da Dancing Patinação.</p>
+
+    <h3>Em resumo</h3>
+    <p class="frase">Porta fechada não significa escola fechada. Significa acesso controlado.</p>
+    <p>E, para a Dancing, quando trabalhamos com crianças e adolescentes, controlar quem entra no ambiente faz parte do dever de cuidado.</p>
+    <a class="voltar" href="#topo">↑ Voltar à lista</a>
+  </div>
+</details>
+
+<!-- 2 -->
+<details id="area-de-aula">
+  <summary><span class="icone">👧</span><span class="titulo">2. Área de aula reservada aos alunos e equipe<small>Mais privacidade, concentração e segurança durante a aula.</small></span><span class="seta"></span></summary>
+  <div class="corpo">
+    <h2>Por que as áreas de aula têm acesso restrito?</h2>
+    <p>As aulas de patinação artística da Dancing são compostas, em sua maioria, por crianças, pré-adolescentes e adolescentes.</p>
+    <p>Por esse motivo, o espaço de aula é reservado aos alunos, professores, monitores e colaboradores autorizados.</p>
+    <p>A restrição não tem o objetivo de afastar as famílias, mas de preservar um ambiente adequado à prática esportiva, ao desenvolvimento dos alunos e à segurança de todos.</p>
+
+    <h3>Privacidade e conforto dos alunos</h3>
+    <p>A infância e, especialmente, a adolescência são períodos de mudanças físicas e emocionais importantes.</p>
+    <p>Durante a prática esportiva, os alunos realizam movimentos, exercícios, alongamentos, quedas, correções de postura e repetições técnicas. Em muitos casos, ainda estão desenvolvendo confiança no próprio corpo e segurança para realizar determinados movimentos.</p>
+    <p>A presença constante de pais, irmãos, avós, amigos ou outros acompanhantes pode gerar constrangimento, vergonha ou sensação de exposição desnecessária.</p>
+    <p>Um ambiente reservado permite que os alunos pratiquem com maior naturalidade e confiança.</p>
+
+    <h3>Concentração e aprendizado</h3>
+    <p>A patinação exige atenção constante.</p>
+    <p>O aluno precisa ouvir comandos, observar demonstrações, controlar velocidade, direção e distância dos demais praticantes.</p>
+    <p>A presença de acompanhantes dentro ou próxima à área de aula aumenta a quantidade de estímulos externos.</p>
+    <p><strong>Conversas paralelas, comentários, telefonemas, risadas e outros ruídos desviam a atenção dos alunos e também dificultam a comunicação entre professores e turma.</strong></p>
+    <p>Mesmo quando o acompanhante não está falando diretamente com a criança, o barulho produzido ao redor interfere na concentração coletiva.</p>
+    <p>Uma orientação técnica que deixa de ser ouvida ou compreendida pode comprometer tanto o aprendizado quanto a segurança.</p>
+
+    <h3>Maior autonomia dos alunos</h3>
+    <p>A presença constante de familiares também pode fazer com que algumas crianças busquem aprovação, proteção ou orientação do acompanhante durante a aula.</p>
+    <p>Isso pode dificultar o desenvolvimento da autonomia e interferir na relação pedagógica entre aluno e professor.</p>
+    <p>Quando a criança permanece sob a orientação direta da equipe, tende a concentrar-se melhor na atividade e a desenvolver maior independência.</p>
+
+    <h3>Menor interferência emocional</h3>
+    <p>A presença de familiares pode alterar a reação dos alunos diante de dificuldades, correções ou quedas.</p>
+    <p>Algumas crianças ficam mais inseguras quando percebem que estão sendo observadas. Outras podem interromper a atividade para procurar o responsável ou reagir de forma diferente diante de uma correção técnica.</p>
+    <p>O espaço reservado ajuda a criar um ambiente mais estável para o aprendizado.</p>
+
+    <h3>Segurança física</h3>
+    <p>Pessoas que não estão participando da aula representam obstáculos adicionais em uma área onde existem alunos se deslocando sobre rodas.</p>
+    <p>Mesmo uma pessoa parada em local inadequado pode aumentar o risco de colisões ou limitar a área disponível para execução dos exercícios.</p>
+    <p>Quanto menos circulação desnecessária houver no espaço de prática, mais previsível e seguro é o ambiente para alunos e professores.</p>
+
+    <h3>Organização da aula</h3>
+    <p>A entrada e saída constante de acompanhantes pode interromper explicações, modificar o fluxo dos exercícios e exigir que os professores desviem sua atenção da turma.</p>
+    <p>A função do professor durante a aula deve permanecer concentrada nos alunos.</p>
+    <p>O controle de acesso ajuda a preservar esse foco.</p>
+
+    <h3>Ambiente coletivo</h3>
+    <p>Também buscamos evitar situações externas à atividade esportiva que possam interferir na turma, como:</p>
+    <ul>
+      <li>discussões entre acompanhantes;</li>
+      <li>manifestações de impaciência ou irritação;</li>
+      <li>comentários sobre outros alunos;</li>
+      <li>interferências nas orientações dos professores;</li>
+      <li>circulação excessiva de pessoas;</li>
+      <li>conversas paralelas;</li>
+      <li>ruídos de telefone ou vídeos;</li>
+      <li>e outras situações que prejudiquem o ambiente de aula.</li>
+    </ul>
+    <p>A escola não presume que essas situações irão ocorrer. O objetivo é simplesmente reduzir fatores externos que não são necessários à atividade.</p>
+
+    <h3>Higiene e saúde coletiva</h3>
+    <p>Limitar a circulação de pessoas também reduz o número de indivíduos compartilhando o mesmo espaço durante as aulas.</p>
+    <p>Isso contribui para a organização, limpeza do ambiente e redução da exposição desnecessária dos alunos a doenças transmissíveis, especialmente em períodos de maior circulação de vírus respiratórios.</p>
+
+    <h3>E os pais e responsáveis?</h3>
+    <p>Os responsáveis continuam fazendo parte da rotina da escola.</p>
+    <p>A Dancing dispõe de áreas destinadas à espera e mantém canais para comunicação com professores e administração.</p>
+    <p>A restrição refere-se apenas à permanência de acompanhantes <strong>dentro da área destinada às aulas durante a atividade</strong>.</p>
+    <p>Sempre que houver uma necessidade específica, a situação poderá ser comunicada à equipe para avaliação.</p>
+
+    <h3>Em resumo</h3>
+    <p>A área de aula é restrita para preservar:</p>
+    <p class="frase">Privacidade, concentração, autonomia, organização, segurança física e qualidade do aprendizado.</p>
+    <p>O aluno precisa de um espaço onde possa experimentar, errar, cair, aprender e evoluir sem exposição desnecessária e com a atenção integral da equipe.</p>
+    <a class="voltar" href="#topo">↑ Voltar à lista</a>
+  </div>
+</details>
+
+<!-- 3 -->
+<details id="janelas">
+  <summary><span class="icone">🪟</span><span class="titulo">3. Janelas com proteção de segurança<small>Reduzimos pontos de acesso indevido ao interior da escola.</small></span><span class="seta"></span></summary>
+  <div class="corpo">
+    <h2>Por que as janelas possuem proteção de segurança?</h2>
+    <p>As janelas da Dancing possuem proteção porque fazem parte do sistema de segurança do estabelecimento.</p>
+    <p>Em uma escola frequentada principalmente por crianças e adolescentes, não basta controlar apenas a porta principal. Outros pontos de acesso ao imóvel também precisam ser considerados.</p>
+
+    <h3>Prevenção de entrada indevida</h3>
+    <p>Dependendo da altura e da localização da janela, uma pessoa do lado externo pode alcançar, forçar ou tentar acessar o interior do imóvel sem passar pela entrada principal.</p>
+    <p>Quando a janela possui acesso próximo à rua ou ao estacionamento, esse risco merece atenção especial.</p>
+    <p>A proteção reduz a possibilidade de entrada indevida por esses pontos e reforça o controle de quem efetivamente consegue acessar o interior da escola.</p>
+
+    <h3>O controle de acesso precisa ser completo</h3>
+    <p>Não faria sentido manter a porta principal fechada e controlada se outro ponto do imóvel permanecesse vulnerável.</p>
+    <p>A lógica é simples:</p>
+    <p class="frase">Se a escola controla quem entra pela porta, também precisa reduzir a possibilidade de alguém entrar por uma janela.</p>
+    <p>As proteções ajudam a manter coerência no sistema de segurança.</p>
+
+    <h3>Proteção das crianças e dos colaboradores</h3>
+    <p>A Dancing atende predominantemente crianças, pré-adolescentes e adolescentes, além de contar com equipe majoritariamente feminina.</p>
+    <p>Por isso, entendemos que qualquer abertura que permita acesso facilitado ao interior do imóvel deve receber atenção preventiva.</p>
+    <p>A escola não deve depender apenas da reação dos colaboradores diante de uma tentativa de entrada.</p>
+    <p>Sempre que possível, o risco deve ser reduzido antes que a situação aconteça.</p>
+
+    <h3>Prevenção contra furtos e invasões</h3>
+    <p>Janelas desprotegidas também podem facilitar tentativas de furto, invasão ou acesso ao imóvel fora dos horários de funcionamento.</p>
+    <p>A proteção contribui para dificultar esse tipo de ocorrência e ajuda a preservar:</p>
+    <ul>
+      <li>a segurança das crianças;</li>
+      <li>os pertences dos alunos;</li>
+      <li>a integridade dos colaboradores;</li>
+      <li>instalações;</li>
+      <li>e o próprio ambiente utilizado pelas crianças.</li>
+    </ul>
+
+    <h3>Segurança sem impedir a função da janela</h3>
+    <p>A existência de proteção não significa, por si só, que a janela deixe de cumprir sua finalidade de iluminação ou ventilação, quando aplicável.</p>
+    <p>A função da proteção é reduzir o risco de acesso indevido, mantendo o uso normal da janela dentro das características do imóvel.</p>
+
+    <h3>Medida preventiva</h3>
+    <p>Como em outras regras de segurança da Dancing, a proteção das janelas segue uma lógica de prevenção.</p>
+    <p>Muitas medidas parecem desnecessárias enquanto nenhum problema ocorre.</p>
+    <p>Entretanto, quando um ponto vulnerável é facilmente identificável, entendemos ser mais prudente protegê-lo previamente do que aguardar uma ocorrência para somente depois tomar providências.</p>
+
+    <h3>Em resumo</h3>
+    <p>As proteções existem para:</p>
+    <ul>
+      <li>dificultar entradas indevidas;</li>
+      <li>complementar o controle realizado pela porta principal;</li>
+      <li>reduzir vulnerabilidades do imóvel;</li>
+      <li>proteger crianças, colaboradores e patrimônio;</li>
+      <li>e tornar o ambiente mais seguro durante e fora do horário das aulas.</li>
+    </ul>
+    <p class="frase">Janela protegida não significa ambiente fechado. Significa um ponto de acesso mais seguro.</p>
+    <a class="voltar" href="#topo">↑ Voltar à lista</a>
+  </div>
+</details>
+
+<!-- 4 -->
+<details id="pronto">
+  <summary><span class="icone">⏰</span><span class="titulo">4. O aluno deve chegar pronto para a aula<small>O tempo da aula é usado para ensinar e a equipe permanece atenta à turma.</small></span><span class="seta"></span></summary>
+  <div class="corpo">
+    <h2>Por que o aluno deve chegar pronto para a aula?</h2>
+    <p>As aulas da Dancing têm duração determinada e foram organizadas para que esse período seja utilizado principalmente para o ensino e a prática da patinação.</p>
+    <p>Por isso, pedimos que o aluno chegue já uniformizado, com seus pertences organizados e, conforme sua idade e grau de autonomia, com os equipamentos preparados para iniciar a atividade.</p>
+    <p>Essa orientação não é apenas uma questão de pontualidade. Ela envolve <strong>segurança, qualidade da aula, autonomia da criança e proteção de sua intimidade</strong>.</p>
+
+    <h3>A aula começa no horário programado</h3>
+    <p>Uma aula de 50 minutos precisa ser utilizada para ensinar.</p>
+    <p>Em uma turma com diversos alunos, se professores e monitores precisassem individualmente trocar roupas, procurar pertences, calçar patins e colocar todos os equipamentos de cada criança, uma parcela significativa do período destinado à aula seria consumida apenas na preparação.</p>
+    <p>Isso prejudicaria toda a turma, inclusive os alunos que chegaram preparados no horário.</p>
+    <p>A lógica é semelhante à de outras atividades esportivas: espera-se que o aluno chegue em condições de iniciar a atividade, enquanto o professor utiliza o período da aula para ensinar, orientar, corrigir e supervisionar.</p>
+
+    <h3>O professor deve estar atento à turma</h3>
+    <p>Os minutos que antecedem o início e o término das aulas são períodos que exigem especial atenção da equipe.</p>
+    <p>É nesse momento que ocorrem:</p>
+    <ul>
+      <li>entrada e saída de alunos;</li>
+      <li>troca de turmas;</li>
+      <li>conferência de presença;</li>
+      <li>organização do espaço;</li>
+      <li>verificação dos equipamentos;</li>
+      <li>orientação das crianças;</li>
+      <li>e acompanhamento de quem está chegando ou deixando a escola.</li>
+    </ul>
+    <p>Se um profissional precisa desviar sua atenção para vestir individualmente uma criança ou realizar toda a preparação de seus equipamentos, deixa temporariamente de observar os demais alunos.</p>
+    <p>Por isso, reduzir tarefas que não dependem necessariamente do professor também é uma medida de segurança coletiva.</p>
+
+    <h3>Preparar a criança não é a mesma coisa que conferir sua segurança</h3>
+    <p>A Dancing diferencia duas situações.</p>
+    <p><strong>Preparar integralmente o aluno para a aula</strong> é diferente de <strong>verificar se ele está em condições seguras para praticar</strong>.</p>
+    <p>A preparação básica (uniforme, organização dos pertences e atividades que a criança já consegue realizar de acordo com sua idade) deve acontecer antes da aula, com participação da própria criança e, quando necessário, de seu responsável.</p>
+    <p>Já a equipe da Dancing poderá conferir e corrigir aspectos relacionados à segurança, como:</p>
+    <ul>
+      <li>ajuste dos patins;</li>
+      <li>cadarços;</li>
+      <li>equipamentos de proteção;</li>
+      <li>cabelo preso;</li>
+      <li>condições aparentes do equipamento;</li>
+      <li>ou qualquer situação que possa representar risco.</li>
+    </ul>
+    <p>Assim, a família participa da preparação e a escola mantém sua função de supervisão técnica e preventiva.</p>
+
+    <h3>Autonomia também faz parte do aprendizado</h3>
+    <p>À medida que a idade permite, aprender a organizar o próprio material, cuidar dos equipamentos e preparar-se para uma atividade esportiva também contribui para o desenvolvimento da criança.</p>
+    <p>A patinação ensina não apenas movimentos técnicos, mas também:</p>
+    <ul>
+      <li>responsabilidade;</li>
+      <li>organização;</li>
+      <li>disciplina;</li>
+      <li>pontualidade;</li>
+      <li>cuidado com o equipamento;</li>
+      <li>e autonomia.</li>
+    </ul>
+    <p>A equipe auxilia quando necessário, principalmente os alunos menores ou aqueles que ainda estão aprendendo determinada tarefa, mas o objetivo não é criar dependência para atividades que progressivamente podem ser realizadas pelo próprio aluno.</p>
+
+    <h3>Proteção da intimidade da criança</h3>
+    <p>Troca de roupas é uma atividade de caráter pessoal.</p>
+    <p>Por isso, sempre que possível, deve ocorrer antes da chegada à área de aula ou em local apropriado, sob responsabilidade da família ou da própria criança, conforme sua idade e autonomia.</p>
+    <p>Evitar que colaboradores realizem rotineiramente trocas de roupas em crianças reduz exposições corporais desnecessárias e preserva tanto a intimidade do aluno quanto os próprios profissionais.</p>
+    <p>Esse cuidado é especialmente importante em um ambiente que atende crianças, pré-adolescentes e adolescentes.</p>
+    <p>A proximidade física necessária à atividade esportiva deve estar relacionada ao ensino, à segurança e à assistência efetivamente necessária, evitando contatos que não sejam indispensáveis.</p>
+
+    <h3>Limites claros também protegem os colaboradores</h3>
+    <p>Políticas de proteção à infância devem resguardar não apenas os alunos, mas também quem trabalha com eles.</p>
+    <p>Quanto mais claras forem as funções dos profissionais, menor será a exposição de alunos e colaboradores a situações inadequadas, interpretações equivocadas ou contatos físicos desnecessários.</p>
+    <p>Por isso, a regra de chegar pronto também contribui para estabelecer limites profissionais adequados.</p>
+
+    <h3>E quando a criança vem diretamente da escola?</h3>
+    <p>Sabemos que algumas famílias possuem rotinas em que a criança vem diretamente da escola, de outro esporte ou de outro compromisso.</p>
+    <p>Nessas situações, havendo necessidade de troca de roupa, deverá ser utilizado o local indicado pela Dancing para essa finalidade.</p>
+    <p>A existência dessa possibilidade atende situações excepcionais, mas não transforma a troca de roupa em responsabilidade rotineira dos professores e monitores.</p>
+
+    <h3>Crianças menores terão auxílio quando necessário</h3>
+    <p>A regra também não significa que uma criança será deixada sem assistência.</p>
+    <p>A idade, a autonomia e a necessidade concreta do aluno serão consideradas.</p>
+    <p>Quando houver dificuldade para ajustar um equipamento, prender um item ou realizar alguma providência necessária à segurança, a equipe poderá prestar auxílio.</p>
+    <p>O princípio é simples:</p>
+    <p class="frase">Auxiliar quando necessário não significa assumir integralmente a preparação pessoal de todos os alunos.</p>
+
+    <h3>Em resumo</h3>
+    <p>Pedimos que o aluno chegue pronto porque isso permite:</p>
+    <ul>
+      <li>aproveitar melhor os 50 minutos de aula;</li>
+      <li>manter professores e monitores concentrados na turma;</li>
+      <li>reduzir distrações nos horários de entrada e saída;</li>
+      <li>desenvolver autonomia e responsabilidade;</li>
+      <li>preservar a intimidade das crianças e adolescentes;</li>
+      <li>evitar contatos físicos desnecessários;</li>
+      <li>proteger alunos e colaboradores;</li>
+      <li>e manter a preparação da aula organizada e segura.</li>
+    </ul>
+    <p>A responsabilidade é compartilhada.</p>
+    <p class="frase">A família ajuda a criança a chegar preparada. O aluno desenvolve progressivamente sua autonomia. E a equipe da Dancing verifica aquilo que interfere na segurança e acompanha a prática esportiva.</p>
+    <p>Essa divisão de responsabilidades permite que cada pessoa exerça adequadamente o seu papel.</p>
+    <a class="voltar" href="#topo">↑ Voltar à lista</a>
+  </div>
+</details>
+
+<!-- 5 -->
+<details id="cabelo">
+  <summary><span class="icone">🎀</span><span class="titulo">5. Cabelos longos devem permanecer presos<small>Evita contato ou enrosco com rodas e patins durante quedas.</small></span><span class="seta"></span></summary>
+  <div class="corpo">
+    <h2>Por que cabelos longos devem permanecer presos?</h2>
+    <p>Na patinação, quedas fazem parte do processo de aprendizagem.</p>
+    <p>Por isso, cabelos longos devem permanecer presos durante as aulas.</p>
+    <p>Essa orientação não tem finalidade estética. Trata-se de uma medida simples de segurança.</p>
+
+    <h3>Redução do risco de enrosco</h3>
+    <p>Durante uma queda, o cabelo pode atingir o piso e ficar próximo às rodas dos próprios patins ou dos patins de outro aluno.</p>
+    <p>Em uma turma, especialmente durante exercícios em grupo, existe movimentação simultânea de várias crianças.</p>
+    <p>O cabelo solto aumenta a possibilidade de:</p>
+    <ul>
+      <li>enroscar em rodas ou eixos;</li>
+      <li>ser puxado acidentalmente;</li>
+      <li>provocar nova queda;</li>
+      <li>causar dor intensa;</li>
+      <li>ou agravar uma situação que, inicialmente, poderia ser apenas uma queda simples.</li>
+    </ul>
+
+    <h3>Proteção do couro cabeludo</h3>
+    <p>Quando o cabelo fica preso em uma roda ou é puxado durante uma queda, a força exercida pode atingir diretamente o couro cabeludo.</p>
+    <p>Além da dor, podem ocorrer arrancamento de fios, lesões e outros danos que podem ser evitados com uma medida preventiva simples: manter o cabelo preso.</p>
+
+    <h3>Segurança também para os outros alunos</h3>
+    <p>O risco não é apenas individual.</p>
+    <p>Se uma criança cai com o cabelo solto e outro aluno passa próximo, o patins desse segundo aluno pode prender no cabelo da primeira.</p>
+    <p>Nesse caso, duas crianças podem cair ao mesmo tempo.</p>
+    <p>Assim, prender os cabelos reduz não apenas o risco para quem os possui longos, mas também para os colegas que compartilham o espaço de aula.</p>
+
+    <h3>Melhor visibilidade e concentração</h3>
+    <p>O cabelo preso também evita que fios caiam sobre o rosto e os olhos durante movimentos, giros, deslocamentos e exercícios.</p>
+    <p>Na patinação, a visão do espaço ao redor é importante para:</p>
+    <ul>
+      <li>perceber outros alunos;</li>
+      <li>acompanhar orientações;</li>
+      <li>calcular distância;</li>
+      <li>mudar de direção;</li>
+      <li>e reagir rapidamente a situações inesperadas.</li>
+    </ul>
+    <p>Reduzir interferências na visão contribui para uma prática mais segura.</p>
+
+    <h3>Uma medida simples e de baixo esforço</h3>
+    <p>Entre as medidas preventivas adotadas pela escola, essa é uma das mais simples.</p>
+    <p>Ela não exige equipamento especial nem interfere no desenvolvimento da aula.</p>
+    <p>Exige apenas que, quando o comprimento do cabelo representar risco de contato com rodas, piso ou equipamentos, ele permaneça adequadamente preso.</p>
+
+    <h3>Em resumo</h3>
+    <p>Manter cabelos longos presos ajuda a:</p>
+    <ul>
+      <li>reduzir o risco de enrosco em rodas e patins;</li>
+      <li>evitar puxões e lesões no couro cabeludo;</li>
+      <li>prevenir quedas secundárias;</li>
+      <li>proteger também os demais alunos;</li>
+      <li>manter melhor visibilidade durante a prática;</li>
+      <li>e tornar o ambiente de aula mais seguro.</li>
+    </ul>
+    <p class="frase">Não se trata de aparência. Trata-se de prevenção.</p>
+    <a class="voltar" href="#topo">↑ Voltar à lista</a>
+  </div>
+</details>
+
+<!-- 6 -->
+<details id="patins">
+  <summary><span class="icone">🛼</span><span class="titulo">6. Patins e cadarços devem estar adequados<small>Equipamentos bem ajustados reduzem riscos de quedas e acidentes.</small></span><span class="seta"></span></summary>
+  <div class="corpo">
+    <h2>Por que patins e cadarços devem estar adequados?</h2>
+    <p>Na patinação, o equipamento faz parte diretamente da segurança do aluno.</p>
+    <p>Por isso, equipamento correto e adequado, cadarços, rodas, freios, eixos, travas, botas e demais componentes precisam estar em condições adequadas de uso.</p>
+    <p>A regra não busca exigir perfeição estética do equipamento. O objetivo é evitar que uma falha simples provoque uma queda ou coloque em risco outros alunos.</p>
+
+    <h3>Cadarços soltos podem provocar acidentes</h3>
+    <p>Cadarços mal amarrados ou excessivamente compridos podem tocar o chão, alcançar as rodas ou enroscar nos próprios patins.</p>
+    <p>Isso pode interromper bruscamente o movimento da criança e provocar uma queda.</p>
+    <p>Por esse motivo, os cadarços devem permanecer firmes, bem ajustados e sem pontas soltas em posição de risco.</p>
+
+    <h3>Equipamento inadequado ou mal ajustado reduz o controle</h3>
+    <p>Um patins de plástico, de brinquedo ou muito folgado, apertado de forma inadequada ou com componentes frouxos pode prejudicar o equilíbrio e a resposta dos movimentos.</p>
+    <p>Na patinação, pequenos problemas de ajuste podem interferir em:</p>
+    <ul>
+      <li>estabilidade;</li>
+      <li>frenagem;</li>
+      <li>mudança de direção;</li>
+      <li>execução de movimentos;</li>
+      <li>equilíbrio;</li>
+      <li>e controle da velocidade.</li>
+    </ul>
+    <p>Quanto menor o controle, maior o risco de queda ou colisão.</p>
+
+    <h3>A manutenção também é importante</h3>
+    <p>Patins são equipamentos sujeitos a desgaste.</p>
+    <p>Rodas, rolamentos, freios, eixos, travas e demais componentes precisam ser observados periodicamente.</p>
+    <p>Peças soltas, desgastadas ou danificadas podem comprometer a segurança durante a atividade.</p>
+    <p>Por isso, recomendamos que os equipamentos próprios sejam mantidos em boas condições de conservação e recebam manutenção sempre que necessário.</p>
+
+    <h3>A equipe pode interromper a atividade por segurança</h3>
+    <p>Sempre que professores ou monitores identificarem uma situação que possa representar risco, o aluno deverá interromper a prática para que o problema seja corrigido.</p>
+    <p>Essa interrupção não tem caráter disciplinar.</p>
+    <p>É uma medida preventiva.</p>
+    <p>Após o ajuste e estando o equipamento novamente em condições adequadas, o aluno poderá retomar a atividade normalmente.</p>
+
+    <h3>Segurança individual e coletiva</h3>
+    <p>Um equipamento inadequado não coloca em risco apenas quem o utiliza.</p>
+    <p>Uma queda provocada por cadarço solto, roda travada ou equipamento mal ajustado pode atingir outro aluno que esteja próximo.</p>
+    <p>Em atividades coletivas, cada aluno também influencia a segurança dos demais.</p>
+    <p>Por isso, a conservação e o correto ajuste dos patins fazem parte da segurança da turma inteira.</p>
+
+    <h3>Responsabilidade compartilhada</h3>
+    <p>A escola pode identificar problemas aparentes, orientar ajustes e interromper a atividade quando perceber situação de risco.</p>
+    <p>Entretanto, no caso de equipamentos particulares, a conservação, manutenção e substituição de peças continuam sob responsabilidade de seus proprietários e responsáveis.</p>
+    <p>A atuação da equipe não substitui a manutenção preventiva adequada.</p>
+
+    <h3>Em resumo</h3>
+    <p>Patins e cadarços adequados ajudam a:</p>
+    <ul>
+      <li>reduzir quedas evitáveis;</li>
+      <li>melhorar estabilidade e controle;</li>
+      <li>evitar enroscos;</li>
+      <li>diminuir o risco de falhas mecânicas;</li>
+      <li>proteger o próprio aluno;</li>
+      <li>preservar a segurança dos colegas;</li>
+      <li>e manter a prática esportiva em condições adequadas.</li>
+    </ul>
+    <p class="frase">Na patinação, equipamento bem ajustado não é detalhe. É parte da segurança.</p>
+    <a class="voltar" href="#topo">↑ Voltar à lista</a>
+  </div>
+</details>
+
+<!-- 7 -->
+<details id="agua">
+  <summary><span class="icone">💧</span><span class="titulo">7. Traga a garrafa de água abastecida<small>A hidratação é garantida, mas procuramos manter piso e rodas secos e seguros.</small></span><span class="seta"></span></summary>
+  <div class="corpo">
+    <h2>Por que trazer a garrafa de água abastecida?</h2>
+    <p>A hidratação é importante e faz parte da prática esportiva.</p>
+    <p>Por isso, a Dancing orienta que cada aluno chegue com sua própria garrafa de água já abastecida.</p>
+    <p>Essa regra <strong>não limita o acesso à água</strong>. Seu objetivo é organizar a hidratação de forma compatível com a segurança de uma atividade realizada sobre rodas.</p>
+
+    <h3>Água no piso pode aumentar o risco de queda</h3>
+    <p>Na patinação, o contato das rodas com o piso precisa ocorrer em condições adequadas.</p>
+    <p>Quando há água no chão, mesmo em pequena quantidade, pode haver redução da aderência e alteração do comportamento das rodas.</p>
+    <p>Isso pode provocar:</p>
+    <ul>
+      <li>perda de estabilidade;</li>
+      <li>escorregamento;</li>
+      <li>dificuldade de frenagem;</li>
+      <li>mudanças inesperadas de direção;</li>
+      <li>e quedas.</li>
+    </ul>
+    <p>Por esse motivo, manter o piso seco é uma medida importante de prevenção.</p>
+
+    <h3>Rodas molhadas também podem comprometer a segurança</h3>
+    <p>O problema não está apenas na água derramada no piso.</p>
+    <p>Quando as rodas entram em contato com uma área molhada, elas próprias podem transportar umidade para outras partes da área de aula.</p>
+    <p>Assim, um pequeno derramamento pode ampliar a área afetada e criar risco para diversos alunos.</p>
+    <p>A prevenção, portanto, beneficia toda a turma.</p>
+
+    <h3>A garrafa cheia reduz deslocamentos desnecessários</h3>
+    <p>Trazer a garrafa abastecida também evita que vários alunos precisem sair da área de aula para procurar água logo no início da atividade.</p>
+    <p>Isso ajuda a:</p>
+    <ul>
+      <li>preservar o tempo útil da aula;</li>
+      <li>reduzir interrupções;</li>
+      <li>manter a turma organizada;</li>
+      <li>e permitir que professores e monitores acompanhem melhor os alunos.</li>
+    </ul>
+    <p>Em uma aula com várias crianças, pequenos deslocamentos simultâneos podem gerar desorganização e exigir atenção adicional da equipe.</p>
+
+    <h3>O reabastecimento é permitido</h3>
+    <p>Se a água acabar durante a aula, o aluno poderá reabastecer sua garrafa.</p>
+    <p>A diferença é que esse procedimento será feito de forma organizada e, quando necessário, com acompanhamento da equipe.</p>
+    <p>O objetivo é evitar correria, aglomeração, derramamentos e retorno à área de prática com piso ou rodas molhadas.</p>
+
+    <h3>O aluno nunca fica sem água por ter esquecido a garrafa</h3>
+    <p>Se o aluno esquecer sua garrafa, a Dancing dispõe de garrafas higienizadas para utilização.</p>
+    <p>Portanto, a orientação de trazer a garrafa abastecida <strong>não significa que uma criança ficará sem acesso à água</strong>.</p>
+    <p>A escola procura conciliar duas necessidades igualmente importantes:</p>
+    <p class="frase">Hidratação e segurança.</p>
+
+    <h3>Por que não deixar cada criança sair livremente para buscar água?</h3>
+    <p>Porque a aula acontece em um ambiente coletivo.</p>
+    <p>Quando vários alunos entram e saem sem organização, podem ocorrer:</p>
+    <ul>
+      <li>interrupções constantes;</li>
+      <li>perda de atenção;</li>
+      <li>circulação próxima a alunos que estão patinando;</li>
+      <li>maior possibilidade de derramamento de água;</li>
+      <li>dificuldade de controle da turma;</li>
+      <li>e redução do tempo efetivo de aula.</li>
+    </ul>
+    <p>Por isso, a hidratação é incentivada, mas organizada.</p>
+
+    <h3>Hidratação faz parte da segurança</h3>
+    <p>A Dancing não trata a água como algo secundário.</p>
+    <p>A criança pode e deve se hidratar.</p>
+    <p>O que a escola procura evitar é que o ato de buscar água crie um novo risco dentro de uma atividade em que equilíbrio, aderência e controle são essenciais.</p>
+
+    <h3>Em resumo</h3>
+    <p>Pedimos que a garrafa venha abastecida porque isso ajuda a:</p>
+    <ul>
+      <li>manter o piso seco;</li>
+      <li>reduzir o risco de escorregamentos;</li>
+      <li>evitar que rodas molhadas espalhem água pela área de aula;</li>
+      <li>reduzir deslocamentos desnecessários;</li>
+      <li>preservar o tempo da atividade;</li>
+      <li>facilitar a organização da turma;</li>
+      <li>e manter a hidratação de forma segura.</li>
+    </ul>
+    <p>Se for necessário reabastecer, isso poderá ser feito de forma organizada durante a aula.</p>
+    <p>Se a garrafa for esquecida, a escola dispõe de alternativa para que o aluno possa se hidratar.</p>
+    <p class="frase">A regra não existe para restringir a água. Existe para que a hidratação aconteça sem criar um risco adicional para quem está patinando.</p>
+    <a class="voltar" href="#topo">↑ Voltar à lista</a>
+  </div>
+</details>
+
+<!-- 8 -->
+<details id="uniforme">
+  <summary><span class="icone">👕</span><span class="titulo">8. Uniforme e roupa adequada<small>Facilitam os movimentos, a identificação dos alunos e a segurança da prática.</small></span><span class="seta"></span></summary>
+  <div class="corpo">
+    <h2>Por que o uniforme e a roupa adequada são importantes?</h2>
+    <p>Na patinação, a roupa utilizada pelo aluno também faz parte da segurança.</p>
+    <p>Por isso, a Dancing orienta o uso do uniforme e de vestimentas adequadas à prática esportiva.</p>
+    <p>Essa exigência não tem finalidade estética. O objetivo é permitir movimentos com segurança, reduzir riscos e facilitar a identificação dos alunos durante as atividades.</p>
+
+    <h3>Roupas inadequadas podem interferir nos movimentos</h3>
+    <p>Peças muito largas, compridas ou com partes soltas podem dificultar movimentos ou se aproximar das rodas e dos equipamentos.</p>
+    <p>Dependendo da peça, podem ocorrer situações como:</p>
+    <ul>
+      <li>enrosco em rodas ou patins;</li>
+      <li>tropeços;</li>
+      <li>limitação dos movimentos;</li>
+      <li>dificuldade na execução de exercícios;</li>
+      <li>perda de equilíbrio;</li>
+      <li>ou interferência no posicionamento corporal.</li>
+    </ul>
+    <p>Na patinação, pequenos obstáculos podem resultar em quedas.</p>
+
+    <h3>O professor precisa observar os movimentos do aluno</h3>
+    <p>A roupa adequada também facilita a avaliação técnica.</p>
+    <p>Durante a aula, o professor precisa observar postura, alinhamento corporal, posição de pernas e braços e execução dos movimentos.</p>
+    <p>Vestimentas inadequadas podem dificultar essa observação e prejudicar correções importantes para o desenvolvimento técnico e para a segurança.</p>
+
+    <h3>O uniforme facilita a identificação</h3>
+    <p>A Dancing atende várias crianças e adolescentes em diferentes horários e turmas.</p>
+    <p>O uniforme permite que professores, monitores e demais colaboradores identifiquem rapidamente quem está participando das atividades.</p>
+    <p>Isso é especialmente útil nos momentos de:</p>
+    <ul>
+      <li>entrada;</li>
+      <li>saída;</li>
+      <li>troca de turmas;</li>
+      <li>eventos;</li>
+      <li>atividades com maior número de alunos;</li>
+      <li>e situações em que seja necessário localizar rapidamente uma criança.</li>
+    </ul>
+
+    <h3>Organização também contribui para a segurança</h3>
+    <p>Padronizar a vestimenta reduz dúvidas sobre quais roupas são adequadas à prática.</p>
+    <p>Também evita que cada aluno utilize peças que, embora adequadas para outras situações, não sejam apropriadas para uma atividade sobre rodas.</p>
+    <p>O uniforme cria um padrão simples e previsível.</p>
+
+    <h3>Pertencimento e rotina esportiva</h3>
+    <p>O uniforme também ajuda a criança a compreender que está iniciando uma atividade esportiva organizada.</p>
+    <p>Assim como em outras modalidades, a preparação adequada contribui para disciplina, responsabilidade e concentração.</p>
+    <p>Esse aspecto é secundário em relação à segurança, mas também faz parte da formação esportiva.</p>
+
+    <h3>E se houver alguma situação excepcional?</h3>
+    <p>Quando houver necessidade específica, a família poderá informar a equipe.</p>
+    <p>A intenção da escola não é criar constrangimentos, mas preservar condições adequadas para a prática.</p>
+    <p>A avaliação sempre deve considerar a segurança e a natureza da atividade.</p>
+
+    <h3>Em resumo</h3>
+    <p>O uniforme e a roupa adequada ajudam a:</p>
+    <ul>
+      <li>reduzir riscos de enrosco e tropeço;</li>
+      <li>permitir maior liberdade de movimentos;</li>
+      <li>facilitar a observação técnica do professor;</li>
+      <li>identificar os alunos;</li>
+      <li>organizar as turmas;</li>
+      <li>e criar um padrão adequado à prática da patinação.</li>
+    </ul>
+    <p class="frase">Uniforme não é apenas padronização. Também é uma medida de organização e segurança.</p>
+    <a class="voltar" href="#topo">↑ Voltar à lista</a>
+  </div>
+</details>
+
+<!-- 9 -->
+<details id="saida">
+  <summary><span class="icone">👨‍👩‍👧</span><span class="titulo">9. Avise mudanças na entrada ou saída<small>Precisamos saber quem está autorizado a acompanhar ou retirar a criança.</small></span><span class="seta"></span></summary>
+  <div class="corpo">
+    <h2>Por que comunicar alterações na entrada ou saída do aluno?</h2>
+    <p>A segurança do aluno também envolve saber <strong>quem o entrega, quem o acompanha e quem está autorizado a retirá-lo da escola</strong>.</p>
+    <p>Por isso, qualquer alteração relevante na rotina de entrada ou saída deve ser previamente informada à Dancing.</p>
+    <p>Essa orientação não é burocrática. É uma medida de proteção da criança e de organização da responsabilidade da escola.</p>
+
+    <h3>A escola precisa saber com quem o aluno pode sair</h3>
+    <p>Durante o período em que a criança está sob os cuidados da Dancing, a equipe deve evitar que ela seja entregue a pessoa não identificada ou não previamente autorizada.</p>
+    <p>Se alguém diferente do responsável habitual comparece para buscar o aluno, a escola precisa ter elementos para saber se essa retirada está efetivamente autorizada.</p>
+    <p>Sem essa informação, o colaborador é colocado diante de uma decisão que não deveria precisar tomar por conta própria.</p>
+
+    <h3>Evitamos decisões improvisadas</h3>
+    <p>Imagine a situação: uma pessoa chega à escola, chama a criança pelo nome e afirma que foi autorizada pela família a buscá-la.</p>
+    <p>Se essa alteração não tiver sido previamente comunicada, a equipe poderá não ter condições de verificar imediatamente se a informação é verdadeira.</p>
+    <p>Por isso, a regra é simples:</p>
+    <p class="frase">Mudou a pessoa que vai buscar o aluno, informe a escola.</p>
+    <p>Essa comunicação reduz riscos e também evita constrangimentos.</p>
+
+    <h3>Quais alterações devem ser comunicadas?</h3>
+    <p>A escola deve ser informada sempre que houver, por exemplo:</p>
+    <ul>
+      <li>outra pessoa responsável pela retirada;</li>
+      <li>saída antecipada;</li>
+      <li>mudança temporária na rotina;</li>
+      <li>autorização para saída desacompanhada, quando compatível com a idade e previamente aceita pela escola;</li>
+      <li>alteração relevante na pessoa que costuma entregar ou buscar o aluno;</li>
+      <li>ou qualquer orientação especial referente à entrada ou saída.</li>
+    </ul>
+
+    <h3>O controle protege a própria família</h3>
+    <p>O registro prévio reduz situações como:</p>
+    <ul>
+      <li>desencontro entre responsáveis;</li>
+      <li>familiares diferentes comparecendo simultaneamente;</li>
+      <li>dúvidas sobre quem estava autorizado;</li>
+      <li>discussões posteriores sobre uma suposta autorização verbal;</li>
+      <li>e informações contraditórias dadas à equipe.</li>
+    </ul>
+    <p>Quando a orientação é comunicada de maneira clara, todos sabem qual procedimento deve ser seguido.</p>
+
+    <h3>Situações familiares específicas exigem ainda mais cuidado</h3>
+    <p>Em algumas famílias podem existir situações particulares envolvendo guarda, convivência, retirada da criança ou restrições relacionadas a determinadas pessoas.</p>
+    <p>A Dancing não tem como conhecer essas circunstâncias se não for formalmente informada.</p>
+    <p>Quando houver alguma restrição relevante, os responsáveis devem comunicar a administração e, quando necessário, apresentar documentação suficiente para que a escola possa cumprir corretamente a orientação.</p>
+    <p>A escola não deve decidir conflitos familiares nem presumir quem possui ou não autorização.</p>
+
+    <h3>Comunicação preferencialmente por escrito</h3>
+    <p>Sempre que possível, alterações relevantes devem ser informadas pelo canal oficial da Dancing e por escrito.</p>
+    <p>Essa prática oferece segurança para todos porque permite:</p>
+    <ul>
+      <li>identificar quem fez a solicitação;</li>
+      <li>compreender corretamente a orientação;</li>
+      <li>consultar a informação posteriormente;</li>
+      <li>reduzir equívocos;</li>
+      <li>e manter histórico do atendimento.</li>
+    </ul>
+    <p>A rastreabilidade é especialmente importante quando a decisão envolve a entrega de uma criança a terceiro.</p>
+
+    <h3>A criança também deve ser orientada</h3>
+    <p>Os responsáveis devem ensinar o aluno a não deixar o estabelecimento sem que a equipe tenha conhecimento.</p>
+    <p>Mesmo que a criança reconheça a pessoa que chegou para buscá-la, é importante que a saída ocorra de forma organizada.</p>
+    <p>Esse procedimento permite que a escola saiba que o aluno deixou o local e encerrou corretamente o período sob sua supervisão.</p>
+
+    <h3>A regra também protege os colaboradores</h3>
+    <p>Sem um procedimento definido, cada funcionário poderia agir de maneira diferente diante da mesma situação.</p>
+    <p>A política de comunicação prévia cria um padrão claro e evita que professores, recepcionistas ou monitores precisem assumir individualmente a responsabilidade por uma autorização que não foi adequadamente informada.</p>
+
+    <h3>Em resumo</h3>
+    <p>Comunicar alterações na entrada e saída permite:</p>
+    <ul>
+      <li>saber quem está autorizado a retirar o aluno;</li>
+      <li>evitar entrega a pessoa não autorizada;</li>
+      <li>reduzir desencontros entre familiares;</li>
+      <li>impedir decisões improvisadas;</li>
+      <li>manter histórico das autorizações;</li>
+      <li>proteger alunos, responsáveis e colaboradores;</li>
+      <li>e assegurar que a saída da criança aconteça de forma controlada.</li>
+    </ul>
+    <p class="frase">Saber quem retira uma criança não é excesso de controle. É uma medida elementar de segurança.</p>
+    <p>Por isso, sempre que houver uma alteração na rotina, pedimos que a família informe previamente a Dancing.</p>
+    <a class="voltar" href="#topo">↑ Voltar à lista</a>
+  </div>
+</details>
+
+<!-- 10 -->
+<details id="dados">
+  <summary><span class="icone">📱</span><span class="titulo">10. Mantenha seus dados de contato e pagamento atualizados<small>Precisamos conseguir falar com a família e manter o contrato funcionando corretamente.</small></span><span class="seta"></span></summary>
+  <div class="corpo">
+    <h2>Por que manter os dados de contato e de pagamento atualizados?</h2>
+    <p>A relação entre a Dancing e as famílias depende de informações corretas e atualizadas.</p>
+    <p>Por isso, pedimos que os responsáveis mantenham sempre atualizados:</p>
+    <ul>
+      <li>número de WhatsApp;</li>
+      <li>telefone;</li>
+      <li>demais dados de contato informados à escola;</li>
+      <li>e, quando aplicável, o meio de pagamento utilizado no contrato.</li>
+    </ul>
+    <p>Essa orientação contribui para a segurança, para a boa comunicação e para o correto cumprimento das obrigações contratuais.</p>
+
+    <h3>O WhatsApp é o principal canal de comunicação com as famílias</h3>
+    <p>A Dancing utiliza o WhatsApp como canal oficial para grande parte das comunicações com pais e responsáveis.</p>
+    <p>Por esse meio podem ser enviados, por exemplo:</p>
+    <ul>
+      <li>avisos sobre aulas;</li>
+      <li>alterações de horários;</li>
+      <li>informações administrativas;</li>
+      <li>orientações de segurança;</li>
+      <li>comunicados sobre eventos;</li>
+      <li>solicitações de confirmação;</li>
+      <li>mensagens contratuais;</li>
+      <li>e informações relacionadas à cobrança.</li>
+    </ul>
+    <p>Se o número estiver desatualizado, incorreto ou indisponível, a escola poderá não conseguir transmitir uma informação importante no momento necessário.</p>
+
+    <h3>Dados atualizados são também uma questão de segurança</h3>
+    <p>Em determinadas situações, a escola pode precisar entrar em contato rapidamente com o responsável.</p>
+    <p>Isso pode ocorrer diante de:</p>
+    <ul>
+      <li>mal-estar;</li>
+      <li>acidente;</li>
+      <li>necessidade de retirada antecipada;</li>
+      <li>alteração inesperada na rotina;</li>
+      <li>situação envolvendo entrada ou saída do aluno;</li>
+      <li>ou qualquer ocorrência que exija contato com a família.</li>
+    </ul>
+    <p>Por isso, manter o telefone atualizado não é apenas uma questão administrativa.</p>
+    <p>É também uma medida de segurança.</p>
+
+    <h3>A escola precisa saber qual é o contato válido</h3>
+    <p>Quando há vários números antigos, contatos desativados ou informações divergentes, aumenta o risco de:</p>
+    <ul>
+      <li>comunicar a pessoa errada;</li>
+      <li>não localizar o responsável;</li>
+      <li>atrasar uma informação importante;</li>
+      <li>gerar desencontro de orientações;</li>
+      <li>ou perder a rastreabilidade de determinada comunicação.</li>
+    </ul>
+    <p>Sempre que houver mudança de número, responsável financeiro ou contato principal, pedimos que a administração seja informada.</p>
+
+    <h3>Comunicação escrita ajuda a evitar dúvidas</h3>
+    <p>Sempre que possível, assuntos administrativos, contratuais e de segurança são tratados por escrito.</p>
+    <p>Isso permite manter histórico e conferir posteriormente:</p>
+    <ul>
+      <li>o que foi informado;</li>
+      <li>quando foi informado;</li>
+      <li>quem recebeu a comunicação;</li>
+      <li>qual orientação foi transmitida;</li>
+      <li>e qual resposta foi apresentada.</li>
+    </ul>
+    <p>Essa rastreabilidade protege tanto a família quanto a escola.</p>
+
+    <h3>A atualização do contato é responsabilidade compartilhada</h3>
+    <p>A Dancing procura manter seus cadastros corretos, mas depende das informações fornecidas pelos próprios responsáveis.</p>
+    <p>Se houver mudança de telefone, perda da linha, troca de aparelho ou alteração da pessoa responsável pelo contato, é importante comunicar a escola.</p>
+    <p>A escola não tem como saber que determinado número deixou de ser utilizado se essa alteração não for informada.</p>
+
+    <h3>O mesmo cuidado se aplica ao meio de pagamento</h3>
+    <p>Nos planos com cobrança recorrente, o cartão ou outro meio de pagamento precisa permanecer válido e ativo.</p>
+    <p>Se o cartão estiver:</p>
+    <ul>
+      <li>vencido;</li>
+      <li>cancelado;</li>
+      <li>substituído;</li>
+      <li>bloqueado;</li>
+      <li>sem limite disponível;</li>
+      <li>ou impossibilitado de concluir a transação,</li>
+    </ul>
+    <p>a cobrança poderá não ser realizada.</p>
+    <p>Nessas situações, o responsável deverá verificar a situação e, quando necessário, atualizar o meio de pagamento pelos canais indicados pela Dancing.</p>
+
+    <h3>A escola não controla decisões das instituições financeiras</h3>
+    <p>Recusas de cartão podem ocorrer por motivos definidos pelo banco, administradora, bandeira ou instituição financeira.</p>
+    <p>A Dancing poderá informar que determinada cobrança não foi concluída, mas nem sempre terá acesso ao motivo detalhado da recusa.</p>
+    <p>Cabe ao titular verificar a situação junto à instituição responsável e providenciar a regularização.</p>
+
+    <h3>Segurança dos dados de pagamento</h3>
+    <p>Dados financeiros devem ser tratados com cuidado.</p>
+    <p>Por isso, sempre que houver necessidade de cadastrar ou substituir um cartão, o responsável deverá utilizar os meios oficiais disponibilizados pela escola.</p>
+    <p>Isso reduz o risco de exposição desnecessária de informações financeiras e ajuda a manter o processamento das cobranças dentro dos sistemas utilizados pela Dancing.</p>
+
+    <h3>Tratamento uniforme e previsibilidade</h3>
+    <p>Manter dados cadastrais e financeiros atualizados também contribui para que a escola possa aplicar seus procedimentos de forma uniforme.</p>
+    <p>Cadastros corretos ajudam a evitar:</p>
+    <ul>
+      <li>falhas de comunicação;</li>
+      <li>cobranças não processadas;</li>
+      <li>informações desencontradas;</li>
+      <li>tratamentos diferentes entre famílias;</li>
+      <li>e discussões que poderiam ser evitadas com registros claros.</li>
+    </ul>
+
+    <h3>Em resumo</h3>
+    <p>Manter os dados de contato e de pagamento atualizados permite:</p>
+    <ul>
+      <li>comunicação rápida com os responsáveis;</li>
+      <li>contato em situações de segurança;</li>
+      <li>envio correto de avisos e orientações;</li>
+      <li>manutenção de histórico das comunicações;</li>
+      <li>melhor rastreabilidade;</li>
+      <li>redução de falhas administrativas;</li>
+      <li>processamento correto das cobranças;</li>
+      <li>e maior segurança para alunos, famílias e escola.</li>
+    </ul>
+    <p class="frase">Contato atualizado garante que a escola consiga falar com a família quando necessário. Meio de pagamento atualizado garante que a relação contratual continue funcionando corretamente.</p>
+    <p>Por isso, sempre que houver qualquer alteração, pedimos que o responsável informe a administração da Dancing pelos canais oficiais.</p>
+    <a class="voltar" href="#topo">↑ Voltar à lista</a>
+  </div>
+</details>
+
+<!-- 11 -->
+<details id="reposicao">
+  <summary><span class="icone">📅</span><span class="titulo">11. Reposição e reagendamento de aulas<small>As reposições seguem as hipóteses previstas no contrato, iguais para todos.</small></span><span class="seta"></span></summary>
+  <div class="corpo">
+    <h2>Por que existem regras específicas para reposição e reagendamento de aulas?</h2>
+    <p>Na Dancing, existem modalidades de aula com formas diferentes de organização.</p>
+    <p>Por isso, também existem critérios específicos para reposição e reagendamento.</p>
+    <p>As regras não foram criadas para dificultar a rotina das famílias. Elas procuram preservar:</p>
+    <ul>
+      <li>a continuidade pedagógica;</li>
+      <li>a organização das turmas;</li>
+      <li>a previsibilidade da agenda;</li>
+      <li>o equilíbrio contratual;</li>
+      <li>e o respeito ao tempo dos profissionais envolvidos.</li>
+    </ul>
+
+    <h3 class="parte">1. Aulas em grupo: a aluna participa de um programa contínuo</h3>
+    <p>Nas aulas em grupo, a aluna participa de um programa de treinamento estruturado ao longo do período contratado.</p>
+    <p>Dependendo do plano, esse programa pode compreender, por exemplo, 40 ou 80 aulas distribuídas ao longo de 12 meses.</p>
+    <p>A turma evolui conjuntamente.</p>
+    <p>Cada aula faz parte de uma sequência de aprendizagem, e o conteúdo apresentado naquele encontro integra o desenvolvimento do grupo.</p>
+    <p>Por isso, quando uma aluna falta, a aula não é interrompida nem posteriormente repetida apenas para quem não compareceu.</p>
+
+    <h4>A aula acontece mesmo quando um aluno falta</h4>
+    <p>O professor comparece, a turma realiza a atividade e o conteúdo programado é ministrado normalmente.</p>
+    <p>Assim, a ausência individual não significa que a aula deixou de existir.</p>
+    <p>A escola continua disponibilizando:</p>
+    <ul>
+      <li>professor;</li>
+      <li>estrutura;</li>
+      <li>espaço;</li>
+      <li>horário;</li>
+      <li>planejamento;</li>
+      <li>e conteúdo pedagógico.</li>
+    </ul>
+    <p>Por essa razão, a reposição de uma aula perdida não funciona como uma simples transferência automática para outra data.</p>
+
+    <h4>A reposição é presencial e não significa repetição do conteúdo</h4>
+    <p>Quando contratualmente admitida, a reposição ocorre de forma presencial, em turma ou horário disponibilizado pela escola.</p>
+    <p>Isso não significa que o conteúdo da aula originalmente perdida será novamente ministrado.</p>
+    <p>A turma de reposição estará seguindo sua própria programação.</p>
+    <p>A reposição permite que o aluno participe de outra atividade disponível, mas não transforma uma aula coletiva em atendimento individualizado.</p>
+
+    <h4>Quando a reposição é admitida?</h4>
+    <p>Conforme previsto contratualmente, a reposição de aula perdida ocorre apenas nas hipóteses previstas no contrato.</p>
+    <p>Entre elas:</p>
+    <ol>
+      <li>Doença pessoal do aluno, mediante apresentação de atestado médico.</li>
+      <li>Situação de força maior, decorrente de fato alheio à vontade das partes e de conhecimento notório.</li>
+      <li>Cancelamento da aula pela própria Dancing, quando não houver possibilidade de substituição do profissional ou quando a escola não puder funcionar.</li>
+    </ol>
+    <p>Fora das hipóteses contratualmente previstas, a ausência do aluno não gera automaticamente direito à reposição.</p>
+
+    <h4>Por que limitar as hipóteses?</h4>
+    <p>Porque uma turma coletiva não funciona por atendimento individual.</p>
+    <p>Se cada ausência particular gerasse direito irrestrito a reposição, a escola teria de criar vagas adicionais, deslocar alunos entre turmas e reorganizar continuamente professores e horários.</p>
+    <p>Isso afetaria:</p>
+    <ul>
+      <li>capacidade das turmas;</li>
+      <li>qualidade das aulas;</li>
+      <li>planejamento pedagógico;</li>
+      <li>organização dos professores;</li>
+      <li>e tratamento uniforme entre os alunos.</li>
+    </ul>
+    <p>A regra permite que todos saibam previamente quando a reposição é possível.</p>
+
+    <h3 class="parte">2. Aulas individuais ou previamente agendadas</h3>
+    <p>Nas aulas individuais, a lógica é diferente.</p>
+    <p>Nesse formato, o cliente adquire previamente determinado número de aulas e agenda o dia e horário em que será atendido.</p>
+    <p>Quando o horário é confirmado, aquele período passa a ser reservado exclusivamente para o aluno.</p>
+    <p>O profissional organiza sua agenda considerando aquele compromisso.</p>
+
+    <h4>Um horário reservado deixa de estar disponível para outra pessoa</h4>
+    <p>Quando uma aula individual é agendada, o professor deixa de oferecer aquele mesmo horário para outro cliente.</p>
+    <p>Isso significa que existe uma reserva efetiva de tempo profissional.</p>
+    <p>Mesmo quando o aluno não comparece, o horário reservado:</p>
+    <ul>
+      <li>permaneceu bloqueado na agenda;</li>
+      <li>não pôde ser vendido a outro cliente;</li>
+      <li>exigiu disponibilidade do profissional;</li>
+      <li>e deixou de gerar outra oportunidade de atendimento.</li>
+    </ul>
+    <p>Por isso, a falta do aluno não transforma automaticamente aquele horário em uma aula a ser novamente oferecida.</p>
+
+    <h4>Avisar com antecedência nem sempre elimina a perda</h4>
+    <p>É compreensível imaginar que um aviso com 24 horas de antecedência permitiria simplesmente preencher o horário com outra pessoa.</p>
+    <p>Na prática, isso nem sempre acontece.</p>
+    <p>Outros clientes já possuem suas próprias agendas, compromissos e horários organizados.</p>
+    <p>Um espaço que ficou reservado durante dias ou semanas pode não ser preenchido de um momento para outro.</p>
+    <p>Assim, mesmo havendo aviso prévio, o profissional pode permanecer com aquele horário sem atendimento e sem possibilidade real de substituição.</p>
+
+    <h4>Existe um custo de oportunidade</h4>
+    <p>A aula individual envolve algo que não existe da mesma forma na aula coletiva:</p>
+    <p class="frase">Reserva exclusiva de agenda.</p>
+    <p>O profissional poderia ter utilizado aquele período para atender outro aluno.</p>
+    <p>Quando o horário é reservado e posteriormente não utilizado pelo cliente, existe uma perda de oportunidade de atendimento.</p>
+    <p>Essa é uma das razões pelas quais as regras de cancelamento e reposição precisam ser claras e previsíveis.</p>
+
+    <h4>O tempo do profissional também precisa ser respeitado</h4>
+    <p>A organização de uma agenda profissional depende de compromissos assumidos por ambas as partes.</p>
+    <p>Da mesma forma que se espera que o professor esteja disponível no horário contratado, também se espera que o aluno compareça ao horário que reservou.</p>
+    <p>Essa reciprocidade ajuda a preservar uma relação equilibrada.</p>
+    <p>Não se trata apenas de uma questão financeira.</p>
+    <p>Trata-se também de respeito ao planejamento, à agenda e ao tempo de trabalho do profissional.</p>
+
+    <h4>Quando a reposição da aula individual é admitida?</h4>
+    <p>As hipóteses são as mesmas previstas contratualmente:</p>
+    <ol>
+      <li>Doença pessoal do aluno, devidamente comprovada por atestado médico.</li>
+      <li>Força maior, decorrente de fato alheio à vontade das partes e de conhecimento notório.</li>
+      <li>Cancelamento provocado pela própria Dancing, quando o profissional não puder realizar a aula e não houver possibilidade de substituição ou quando a escola estiver impossibilitada de funcionar.</li>
+    </ol>
+    <p>Fora dessas situações, a ausência do aluno não gera automaticamente o direito a um novo horário.</p>
+
+    <h3 class="parte">Tratamento uniforme</h3>
+    <p>A aplicação objetiva das regras evita que cada ausência seja decidida de forma diferente.</p>
+    <p>Isso é importante para que clientes em situações semelhantes recebam o mesmo tratamento.</p>
+    <p>Também reduz:</p>
+    <ul>
+      <li>negociações casuísticas;</li>
+      <li>interpretações diferentes;</li>
+      <li>conflitos posteriores;</li>
+      <li>perda de rastreabilidade;</li>
+      <li>e insegurança para clientes e profissionais.</li>
+    </ul>
+
+    <h3>Em resumo</h3>
+    <p>Nas aulas em grupo, o aluno participa de um programa contínuo. A aula acontece para a turma mesmo quando um participante falta, e o conteúdo não é repetido individualmente.</p>
+    <p>Nas aulas individuais, existe reserva exclusiva de agenda. O horário contratado deixa de estar disponível para outro cliente e, quando não utilizado, pode representar perda efetiva de tempo e oportunidade para o profissional.</p>
+    <p>Por isso, em ambas as modalidades, as reposições seguem as hipóteses previamente estabelecidas no contrato.</p>
+    <p class="frase">A regra não existe para penalizar uma ausência. Existe para preservar a organização das aulas, o planejamento pedagógico, a agenda profissional e o tratamento uniforme entre todos os clientes.</p>
+    <a class="voltar" href="#topo">↑ Voltar à lista</a>
+  </div>
+</details>
+
+</main>
+
+<section class="fecho">
+  <h2>Por que adotamos essas orientações?</h2>
+  <p>Porque trabalhamos com crianças.</p>
+  <p>Nossa preocupação é prevenir acidentes, preservar a segurança e proporcionar qualidade às aulas.</p>
+  <p>Algumas medidas preventivas podem parecer excessivas ou pouco importantes quando analisadas isoladamente. Em conjunto, porém, ajudam a reduzir riscos, organizar o ambiente e permitir que professores e monitores concentrem sua atenção no que realmente importa: <strong>a segurança e o aprendizado dos alunos.</strong></p>
+  <p>As orientações são gerais e aplicadas de forma uniforme às famílias da escola.</p>
+  <p>Durante as aulas, pedimos que alunos e acompanhantes sigam as orientações de professores, monitores e demais colaboradores.</p>
+  <p>Em caso de dúvida, sugestão ou necessidade específica, utilize o canal oficial de comunicação da Dancing pelo WhatsApp, preferencialmente por escrito. Dessa forma, conseguimos compreender corretamente o contexto, manter o histórico do atendimento e oferecer uma resposta mais clara e uniforme.</p>
+  <!-- Para incluir um botão de WhatsApp, adicione aqui: <a href="https://wa.me/55DDDNUMERO">Falar com a Dancing</a> -->
+</section>
+
+<footer>
+  <strong>Dancing Patinação</strong>
+  Segurança também faz parte da aula.
+</footer>
+
+</div>
+
+<script>
+  var itens = document.querySelectorAll('details');
+
+  // Abre o item indicado no link (ex.: .../#agua) e rola até ele.
+  function abrirPeloLink() {
+    var id = decodeURIComponent(location.hash.slice(1));
+    if (!id) return;
+    var alvo = document.getElementById(id);
+    if (alvo && alvo.tagName === 'DETAILS') {
+      alvo.open = true;
+      setTimeout(function () { alvo.scrollIntoView(); }, 50);
+    }
+  }
+  window.addEventListener('hashchange', abrirPeloLink);
+  abrirPeloLink();
+
+  document.getElementById('abrir').addEventListener('click', function () {
+    itens.forEach(function (d) { d.open = true; });
+  });
+  document.getElementById('fechar').addEventListener('click', function () {
+    itens.forEach(function (d) { d.open = false; });
+  });
+</script>
+</body>
+</html>
