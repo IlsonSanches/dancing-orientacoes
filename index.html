@@ -112,6 +112,19 @@
   .fecho { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--linha); }
   .fecho h2 { font-family: "Fraunces", Georgia, serif; font-size: 26px; margin: 0 0 12px; }
   .fecho p { margin: 0 0 12px; }
+  .cta {
+    margin-top: 28px; padding: 22px 20px; border-radius: 16px;
+    background: var(--primaria-suave); border: 1px solid var(--linha); text-align: center;
+  }
+  .cta p { margin: 0 0 14px; font-weight: 600; }
+  .cta a {
+    display: inline-block; text-decoration: none; font-weight: 700; font-size: 16px;
+    background: var(--primaria); color: var(--fundo); padding: 13px 26px; border-radius: 999px;
+  }
+  .cta a:hover { filter: brightness(1.08); }
+  .cta a:focus-visible { outline: 3px solid var(--destaque); outline-offset: 3px; }
+  .cta small { display: block; margin-top: 10px; color: var(--texto-suave); font-size: 13.5px; }
+  footer a { color: var(--primaria); font-weight: 600; }
   footer { margin-top: 32px; color: var(--texto-suave); font-size: 15px; }
   footer strong { color: var(--texto); display: block; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .seta { transition: none; } }
@@ -1058,8 +1071,14 @@
   <!-- Para incluir um botão de WhatsApp, adicione aqui: <a href="https://wa.me/55DDDNUMERO">Falar com a Dancing</a> -->
 </section>
 
+<section class="cta">
+  <p>Conheça mais sobre a Dancing: Instagram, site, WhatsApp e outros canais.</p>
+  <a href="https://linktr.ee/dancing.p">Acessar os canais da Dancing →</a>
+  <small>Av. Harry Prochet, 777 · Jardim São Jorge · Londrina-PR</small>
+</section>
+
 <footer>
-  <strong>Dancing Patinação</strong>
+  <strong><a href="https://linktr.ee/dancing.p">Dancing Patinação</a></strong>
   Segurança também faz parte da aula.
 </footer>
 
