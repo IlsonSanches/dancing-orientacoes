@@ -12,6 +12,6 @@ Elas fazem parte de uma política de prevenção, segurança, organização e qu
 
 Trabalhamos predominantemente com crianças e adolescentes. Isso exige da escola um cuidado maior com situações que, em outros ambientes, poderiam parecer detalhes.
 
-Uma porta controlada, uma garrafa de água abastecida, um cadarço corretamente amarrado ou a orientação para que um responsável permaneça fora da área de aula podem parecer medidas pequenas quando observadas individualmente.
+Uma porta controlada, uma garrafa de água abastecida, um cadarço corretamente amarrado ou a orientação para que um responsável permaneça fora da área de aula podem parecer medidas desnecessárias quando observadas individualmente.
 
 Mas segurança é justamente o resultado da soma desses pequenos cuidados.
